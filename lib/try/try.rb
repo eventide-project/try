@@ -1,11 +1,16 @@
 module Try
-  def self.call(errors=nil, &action)
+  def self.call(*errors, &action)
     success = false
 
     begin
       action.call
       success = true
-    rescue
+    rescue Exception => e
+      unless errors.empty?
+        unless errors.include? e.class
+          raise e
+        end
+      end
     end
 
     success
