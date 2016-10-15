@@ -1,6 +1,5 @@
 require_relative 'init'
 require 'test_bench'; TestBench.activate
-require 'pp'
 
 context "Returns true when nothing is raised" do
   success = Try.() { puts "Doesn't raise" }
