@@ -1,7 +1,7 @@
-# telemetry_logger
+# try
 
-Telemetry logger.
+Attempt an execution, and determine its success
 
 ## License
 
-The `telemetry_logger` library is released under the [MIT License](https://github.com/try/blob/master/MIT-License.txt).
+The `try` library is released under the [MIT License](https://github.com/try/blob/master/MIT-License.txt).
