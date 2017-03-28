@@ -5,7 +5,7 @@ module Try
     begin
       action.call
       success = true
-    rescue Exception => e
+    rescue StandardError => e
       unless errors.empty?
         unless errors.include? e.class
           raise e
