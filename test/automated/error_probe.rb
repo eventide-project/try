@@ -7,9 +7,11 @@ context "Try" do
         error = nil
         probe = proc { |e| error = e }
 
-        Try.(error_probe: probe) { raise ErrorA }
+        raised_error = ErrorA.new
 
-        assert(error.instance_of?(ErrorA))
+        Try.(error_probe: probe) { raise raised_error }
+
+        assert(error == raised_error)
       end
     end
   end
