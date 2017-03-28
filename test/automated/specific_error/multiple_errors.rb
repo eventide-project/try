@@ -11,11 +11,13 @@ context "Try" do
         end
       end
 
-      context "Specific Error Raised" do
-        success = Try.(ErrorA, ErrorB) { raise ErrorA }
+      [ErrorA, ErrorB].each do |error_class|
+        context "Specific Error Raised (#{error_class.name.split('::').last})" do
+          success = Try.(ErrorA, ErrorB) { raise error_class }
 
-        test "Indicates failure" do
-          refute(success)
+          test "Indicates failure" do
+            refute(success)
+          end
         end
       end
 
