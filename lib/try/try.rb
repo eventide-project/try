@@ -1,5 +1,5 @@
 module Try
-  def self.call(*errors, &action)
+  def self.call(*errors, error_probe: nil, &action)
     success = false
 
     begin
@@ -13,6 +13,8 @@ module Try
       end
     end
 
-    success
+    error_probe.call(e) unless error_probe.nil?
+
+    return success
   end
 end

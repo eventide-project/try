@@ -7,4 +7,7 @@ require_relative '../init.rb'
 
 require 'test_bench'; TestBench.activate
 
+require 'try/controls'
+include Try::Controls
+
 require 'pp'
