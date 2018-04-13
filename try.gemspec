@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name = 'evt-try'
-  s.version = '0.2.1.1'
+  s.version = '0.2.1.2'
   s.summary = 'Attempt an execution, and determine its success'
   s.description = ' '
 
