@@ -1,5 +1,6 @@
 module Try
   def self.call(*errors, error_probe: nil, &action)
+    errors = errors.flatten
     success = false
 
     begin
