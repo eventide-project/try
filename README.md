@@ -59,4 +59,4 @@ puts success
 
 ## License
 
-The `try` library is released under the [MIT License](https://github.com/try/blob/master/MIT-License.txt).
+The `try` library is released under the [MIT License](https://github.com/eventide-project/try/blob/master/MIT-License.txt).
