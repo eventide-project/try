@@ -23,8 +23,12 @@ context "Try" do
 
       context "Other Error Raised" do
         test "Error is re-raised" do
-          assert proc { Try.(ErrorA, ErrorB) { raise RuntimeError } } do
-            raises_error? RuntimeError
+          # assert proc { Try.(ErrorA, ErrorB) { raise RuntimeError } } do
+          #   raises_error?
+          # end
+
+          assert_raises(RuntimeError) do
+            Try.(ErrorA, ErrorB) { raise RuntimeError }
           end
         end
       end
